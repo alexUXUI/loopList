@@ -1,0 +1,14 @@
+{
+  "DEV" : {
+    "endpoint" : "localhost:3000/products/",
+    "loopListPage" : "https://looplist-product-sample.herokuapp.com/products/"
+  },
+  "STAGE" : {
+    "endpoint" : "localhost:3000/products/",
+    "loopListPage" : "https://looplist-product-sample.herokuapp.com/products/"
+  },
+  "PROD" : {
+    "endpoint" : "localhost:3000/products/",
+    "loopListPage" : "https://looplist-product-sample.herokuapp.com/products/"
+  }
+}
