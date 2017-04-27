@@ -21,4 +21,4 @@ Overall thought it was a *super* fun assessment. Really wanted to build a functi
 
 ###### Trouble shooting
 
-If you are having any trouble downloading and running the application and tests, please try these things. `$ rm -rf node_modules` folder and re-download. May have to download mocha globally with `$ npm i -g mocha`
+If you are having any trouble downloading and running the application and tests, please try these things. `$ rm -rf node_modules` folder and re-download. May have to download mocha globally with `$ npm i -g mocha`. Chai request can also get a little fussy so if you;re having trouble running the tests, just wait a moment and try re-running the tests with `$ npm run start` or `$ mocha`.

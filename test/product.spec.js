@@ -4,11 +4,20 @@ var expect = require('chai').expect;
 var app = require('../app.js');
 var config = require('../config/config.json');
 var mockData = require('./mock-data/mocks.js');
+var API = require('../API/products.js');
 chai.use(chaiHttp);
 
 describe('Loop List API Products Test Suite', done => {
 
   let id = 12345;
+
+  it('API find description method should return a string located between two strings', () => {
+    let sampleText = `<h1>This is some mock html<h1> That I am <br> Riddling <span> with tags</span>`;
+    let sampleAnswer = ' is some mock html That I ';
+    let sampleParse = API.getDescription('This', 'am.', sampleText);
+
+    expect(API.getDescription('This', 'am.', sampleText)).to.be.equal(sampleAnswer);
+  });
 
   it('has a product endpoint that takes an ID and returns 200 on valid request', done => {
     chai.request(`${ config.DEV.endpoint }${ id }`)
@@ -81,4 +90,5 @@ describe('Loop List API Products Test Suite', done => {
         done();
       });
   });
+
 });
