@@ -32,7 +32,6 @@ describe('Loop List API Products Test Suite', done => {
     chai.request(`${ config.DEV.endpoint }${ id }`)
       .get('/')
       .end((err, response) => {
-        console.log('mockData');
         expect(response.body.title).to.equal(mockData.title)
         done();
       });
